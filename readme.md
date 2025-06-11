@@ -2,13 +2,12 @@
 
 ## Overview
 
-Welcome to the **Credit Score Movement Predictor**, a high-impact machine learning project designed for Jupiter’s President’s Office. This solution simulates realistic credit behavior and delivers actionable insights by predicting whether a customer's credit score will *increase*, *decrease*, or *remain stable* in the next 3 months. Built with business strategy in mind, this project not only demonstrates technical excellence but also provides a robust framework to inform product, risk, and growth decisions at scale.
+Welcome to the **Credit Score Movement Predictor**, a high-impact machine learning project. This solution simulates realistic credit behavior and delivers actionable insights by predicting whether a customer's credit score will *increase*, *decrease*, or *remain stable* in the next 3 months. Built with business strategy in mind, this project not only demonstrates technical excellence but also provides a robust framework to inform product, risk, and growth decisions at scale.
 
 ---
 
 ## Why This Project?
 
-- **Strategic Impact:** Directly aligns with Jupiter’s mission to drive AI-powered product innovation, risk optimization, and business intelligence.
 - **Real-World Simulation:** Uses a synthetic dataset mirroring actual customer behavior, ensuring relevance to real banking scenarios.
 - **Explainability & Insights:** Goes beyond prediction—delivers clear drivers of credit score movement and actionable business recommendations.
 - **End-to-End Excellence:** Covers the full ML pipeline: data generation, EDA, feature engineering, model training, explainability, and business strategy.
