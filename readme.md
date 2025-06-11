@@ -1,4 +1,4 @@
-# Credit Score Movement Predictor: ML-Driven Decision Intelligence for Jupiter
+# Credit Score Movement Predictor: ML-Driven Decision Intelligence
 
 ## Overview
 
