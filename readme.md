@@ -24,6 +24,51 @@ Welcome to the **Credit Score Movement Predictor**, a high-impact machine learni
   - *Increase:* Low EMI/income ratio, strong repayment history.
   - *Stable:* Balanced behavior.
 - **Method:** Logical heuristics and controlled noise for realism.
+---
+
+## How is the Dataset created?
+#### A. **Customer Profiles**
+
+- `n_customers`: Default = 25,000
+- Each customer includes:
+  - A unique `customer_id`
+  - Randomized **age** (18–70), **gender**, and **location**
+  - **Base income** determined by age and location multiplier
+
+#### B. **Monthly Records**
+
+- Each customer has data for **1 to 5 months** (randomized)
+- For each monthly record:
+  - **Monthly income** includes seasonal variation
+  - **EMI outflow** calculated from income and age-based EMI ratios
+  - **Current outstanding amount** derived from EMI and a realistic repayment window
+  - **Credit utilization ratio** sampled from a beta distribution
+  - **Number of open loans** based on income and age
+  - **Repayment history score** depends on customer age
+  - **Days past due (DPD)** influenced by repayment history
+  - **Number of hard inquiries** higher for younger customers
+  - **Recent credit card usage** simulated from a beta distribution
+  - **Recent loan disbursed amount** conditional on good repayment score
+  - **Total credit limit** derived from income and repayment history
+  - **Months since last default** modeled using probability from repayment behavior
+
+#### C. **Target Variable**
+
+- `target_credit_score_movement`: Final classification label with three possible values:
+  - `"increase"`: credit score expected to rise
+  - `"stable"`: credit score remains the same
+  - `"decrease"`: credit score expected to fall
+- Calculated using weighted factors:
+  - **Payment behavior** (DPD and repayment score)
+  - **Credit utilization**
+  - **EMI burden**
+  - **Credit-seeking behavior**
+  - **Stability** (age and months since last default)
+  - **Recent loan activity**
+- Small random noise is added to simulate natural variation
+- Thresholds are applied to categorize the final score into one of the three classes
+---
+
 
 ### 2. **Exploratory Data Analysis (EDA)**
 - Comprehensive visualizations: target distribution, risk segmentation, outlier detection, and feature correlations.
